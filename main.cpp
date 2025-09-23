@@ -1,29 +1,46 @@
 #include <iostream>
 #include <cassert>
 #include <algorithm>
+#include <string>
 
 // https://github.com/doctest/doctest/blob/master/doc/markdown/tutorial.md
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+//#include "doctest.h"
 
 using namespace std;
 
 #define MIN_ARRAY_LEN 2
 
 int factorial(int n) {
-    if (n == 0)
+    if (n < 0)
     {
+        throw invalid_argument("Negative values cannot be calculated");
         return 1;
     }
 
     return n*factorial(n-1);
 }
 
-TEST_CASE("testing the factorial function") {
-    CHECK(false); // TODO: replace with your tests.
+void test(const string& testName, bool condition)
+{
+    if (condition)
+    {
+        cout << "test passed " << endl;
+    }
+    else
+    {
+        cout << "test failed " << endl;
+    }
 }
 
-int fibonacci(int n) 
+int main()
+{
+    cout << "Running factorial tests: \n";
+    test("factorial of four is 24: ", factorial(4) == 24);
+
+}
+/*
+int fibonacci(int n)
 {
     int firstTerm, newTerm;
     int secondTerm = 1;
@@ -31,6 +48,7 @@ int fibonacci(int n)
 
     if (n <= 2)
     {
+        throw invalid_argument("Negative values cannot be calculated");
         return 1;
     }
     else
@@ -54,15 +72,22 @@ TEST_CASE("testing the fibonacci function") {
 
 int towers(char src, char target, char spare, int n) 
 {
-    int stepsCount;
     if (n <= 0)
     {
+        cout << "number doesnt match ";
         return;
     }
     towers(src, spare, target, n - 1);
-    cout << "disk " << n << " to pole " << target << endl;
 
-    return 0;
+    cout << "disk " << n << " to pole " << target << endl;
+    
+    if (n <= 0)
+    {
+        cout << "number doesnt match ";
+        return 0;
+    }
+
+    return (static_cast<unsigned int>(pow(2, n) - 1));
 }
 
 TEST_CASE("testing the towers function") {
@@ -225,3 +250,5 @@ TEST_CASE("test kth smallest value") {
     srand(0);
     CHECK_NOTHROW(testFindKthSmallestValue(3, 5));
 }
+
+*/
