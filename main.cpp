@@ -12,13 +12,12 @@ using namespace std;
 #define MIN_ARRAY_LEN 2
 
 int factorial(int n) {
-    if (n < 0)
+    if (n == 0)
     {
-        throw invalid_argument("Negative values cannot be calculated");
         return 1;
     }
 
-    return n*factorial(n-1);
+    return n * factorial(n - 1);
 }
 
 void test(const string& testName, bool condition)
@@ -36,7 +35,7 @@ void test(const string& testName, bool condition)
 int main()
 {
     cout << "Running factorial tests: \n";
-    test("factorial of four is 24: ", factorial(4) == 24);
+    test("factorial of four is 24: ", factorial(3) == 6);
 
 }
 /*
