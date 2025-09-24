@@ -35,7 +35,7 @@ void test(const string& testName, bool condition)
 int main()
 {
     cout << "Running factorial tests: \n";
-    test("factorial of four is 24: ", factorial(3) == 6);
+    test("factorial of four is 24: ", factorial(3) == 5);
 
 }
 /*
