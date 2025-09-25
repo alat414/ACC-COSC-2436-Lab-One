@@ -38,31 +38,19 @@ int main()
     test("factorial of four is 24: ", factorial(3) == 5);
 
 }
-
-int fibonacci(int n)
+/*
+void rabbit(int numberPairs) 
 {
-    int firstTerm, newTerm;
-    int secondTerm = 1;
-    
+    int leftVariable = 1, rightVariable = 1, followingVariable;
 
-    if (n <= 2)
+    for (int i = 0; i < numberPairs; i++)
     {
-        throw invalid_argument("Negative values cannot be calculated");
-        return 1;
+        std::cout << leftVariable << "\n";
+        followingVariable = leftVariable + rightVariable;
+        leftVariable = rightVariable;
+        rightVariable = followingVariable;
     }
-    else
-    {
-        for (int i = 3; i < n; i++)
-        {
-            newTerm = firstTerm + secondTerm;
-            if (i != n)
-            {
-                cout << " ";
-                firstTerm = secondTerm;
-                secondTerm = newTerm;
-            }
-        }
-    }
+
 }
 
 int testFibonacci(const string& testName, bool condition, int n) 
@@ -77,7 +65,7 @@ int testFibonacci(const string& testName, bool condition, int n)
 
     }
 }
-/*
+
 int towers(char src, char target, char spare, int n) 
 {
     if (n <= 0)
