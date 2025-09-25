@@ -54,7 +54,7 @@ int towers(char src, char target, char spare, int n)
     if (n <= 0)
     {
         cout << "number doesnt match ";
-        return;
+        return 0;
     }
     towers(src, spare, target, n - 1);
 
@@ -69,7 +69,7 @@ int towerMovesCount(int n)
 {
     if (n < 0)
     {
-        return;
+        return 0;
     }
     return static_cast<int>(pow(2,n)) - 1;
 }
