@@ -65,11 +65,11 @@ void testFibonacci(const string& testName, bool condition)
 
     if (condition)
     {
-        cout << "Test Failed" << testName << endl;
+        cout << "Test passed" << testName << endl;
     }
     else
     {
-        cout << "Test passed!" << testName << endl;
+        cout << "Test failed!" << testName << endl;
     }
 }
 int main()
