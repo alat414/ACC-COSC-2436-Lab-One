@@ -53,12 +53,11 @@ int towers(char src, char target, char spare, int n)
 {
     if (n <= 0)
     {
-        cout << "number doesnt match ";
         return 0;
     }
     towers(src, spare, target, n - 1);
 
-    cout << "disk " << n << " to pole " << target << endl;
+    cout << "move disk " << n << " to pole " << target << endl;
 
     //return (static_cast<unsigned int>(pow(2, n) - 1));
 
