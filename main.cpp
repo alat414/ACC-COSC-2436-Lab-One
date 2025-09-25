@@ -11,7 +11,8 @@ using namespace std;
 
 #define MIN_ARRAY_LEN 2
 
-int factorial(int n) {
+int factorial(int n) 
+{
     if (n == 0)
     {
         return 1;
@@ -64,11 +65,11 @@ void testFibonacci(const string& testName, bool condition)
 
     if (condition)
     {
-        cout << "Test Failed" << endl;
+        cout << "Test Failed" << testName << endl;
     }
     else
     {
-        cout << "Test passed!" << endl;
+        cout << "Test passed!" << testName << endl;
     }
 }
 int main()
