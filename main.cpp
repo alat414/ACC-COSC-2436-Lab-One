@@ -2,6 +2,7 @@
 #include <cassert>
 #include <algorithm>
 #include <string>
+#include <cmath>
 
 // https://github.com/doctest/doctest/blob/master/doc/markdown/tutorial.md
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
@@ -48,6 +49,31 @@ int fibonacci(int numberPairs)
 
 }
 
+int towers(char src, char target, char spare, int n) 
+{
+    if (n <= 0)
+    {
+        cout << "number doesnt match ";
+        return;
+    }
+    towers(src, spare, target, n - 1);
+
+    cout << "disk " << n << " to pole " << target << endl;
+
+    //return (static_cast<unsigned int>(pow(2, n) - 1));
+
+    return towers(spare, target, src, n - 1);
+}
+
+int towerMovesCount(int n)
+{
+    if (n < 0)
+    {
+        return 0;
+    }
+    return static_cast<int>(pow(2,n)) - 1;
+}
+
 void testFactorial(const string& testName, bool condition)
 {
     if (condition)
@@ -74,47 +100,16 @@ void testFibonacci(const string& testName, bool condition)
 }
 int main()
 {
-    cout << "Running fibonacci tests: \n";
+    cout << "Running towers of hanoi function: \n";
     //testFactorial("factorial of three is six: ", factorial(3) == 6);
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
-    testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
+    //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
 
+    towers('A', 'B', 'C', 3);
+    towerMovesCount(3);
 }
 /*
 
-
-int testFibonacci(const string& testName, bool condition, int n) 
-{
-    if (n < 3)
-    {
-        return 1;
-    }
-    else
-    {
-        cout << "test failed ";
-
-    }
-}
-
-int towers(char src, char target, char spare, int n) 
-{
-    if (n <= 0)
-    {
-        cout << "number doesnt match ";
-        return;
-    }
-    towers(src, spare, target, n - 1);
-
-    cout << "disk " << n << " to pole " << target << endl;
-    
-    if (n <= 0)
-    {
-        cout << "number doesnt match ";
-        return 0;
-    }
-
-    return (static_cast<unsigned int>(pow(2, n) - 1));
-}
 
 TEST_CASE("testing the towers function") {
     CHECK(false); // TODO: replace with your tests.
