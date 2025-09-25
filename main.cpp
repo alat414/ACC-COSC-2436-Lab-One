@@ -104,7 +104,7 @@ int main()
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
 
-    towers('A', 'B', 'C', 3);
+    //towers('A', 'B', 'C', 3);
     towerMovesCount(3);
 }
 /*
