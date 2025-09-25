@@ -77,7 +77,7 @@ int main()
     cout << "Running fibonacci tests: \n";
     //testFactorial("factorial of three is six: ", factorial(3) == 6);
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
-    testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 11);
+    testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
 
 }
 /*
