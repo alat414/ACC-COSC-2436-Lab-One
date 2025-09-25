@@ -59,8 +59,6 @@ int towers(char src, char target, char spare, int n)
 
     cout << "move disk " << n << " to pole " << target << endl;
 
-    //return (static_cast<unsigned int>(pow(2, n) - 1));
-
     return towers(spare, target, src, n - 1);
 }
 
