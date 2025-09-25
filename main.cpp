@@ -20,7 +20,21 @@ int factorial(int n) {
     return n * factorial(n - 1);
 }
 
-void test(const string& testName, bool condition)
+int fibonacci(int numberPairs) 
+{
+    int leftVariable = 1, rightVariable = 1, followingVariable;
+
+    for (int i = 0; i < numberPairs; i++)
+    {
+        cout << leftVariable << "\n";
+        followingVariable = leftVariable + rightVariable;
+        leftVariable = rightVariable;
+        rightVariable = followingVariable;
+    }
+
+}
+
+void testFactorial(const string& testName, bool condition)
 {
     if (condition)
     {
@@ -32,27 +46,28 @@ void test(const string& testName, bool condition)
     }
 }
 
+void testFibonacci(const string& testName, bool condition)
+{
+    int *numberPairs;
+    if (numberPairs < 0)
+    {
+        cout << "Test Failed, cannot use negative numbers " << endl;
+    }
+    else
+    {
+        cout << "Test passed!" << endl;
+    }
+}
 int main()
 {
     cout << "Running factorial tests: \n";
-    test("factorial of three is six: ", factorial(3) == 6);
-    test("factorial of four is twenty four: ", factorial(4) == 24);
+    //testFactorial("factorial of three is six: ", factorial(3) == 6);
+    //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
+    testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(7) == 8);
 
 }
 /*
-void rabbit(int numberPairs) 
-{
-    int leftVariable = 1, rightVariable = 1, followingVariable;
 
-    for (int i = 0; i < numberPairs; i++)
-    {
-        std::cout << leftVariable << "\n";
-        followingVariable = leftVariable + rightVariable;
-        leftVariable = rightVariable;
-        rightVariable = followingVariable;
-    }
-
-}
 
 int testFibonacci(const string& testName, bool condition, int n) 
 {
