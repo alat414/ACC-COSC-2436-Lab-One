@@ -22,7 +22,20 @@ int factorial(int n) {
 
 int fibonacci(int numberPairs) 
 {
-    int leftVariable = 1, rightVariable = 1, followingVariable;
+    if (numberPairs < 0)
+    {
+        throw invalid_argument("Fibonacci Sequence does not apply for negative numbers");
+    }
+    else if (numberPairs == 0)
+    {
+        return 0;
+    }
+    else if (numberPairs == 1)
+    {
+        return 1;
+    }
+    
+    int leftVariable = 0, rightVariable = 1, followingVariable;
 
     for (int i = 0; i < numberPairs; i++)
     {
@@ -31,6 +44,7 @@ int fibonacci(int numberPairs)
         leftVariable = rightVariable;
         rightVariable = followingVariable;
     }
+    return rightVariable;
 
 }
 
@@ -48,8 +62,8 @@ void testFactorial(const string& testName, bool condition)
 
 void testFibonacci(const string& testName, bool condition)
 {
-    int *numberPairs;
-    if (numberPairs < 0)
+
+    if (condition)
     {
         cout << "Test Failed, cannot use negative numbers " << endl;
     }
