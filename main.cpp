@@ -38,7 +38,7 @@ int main()
     test("factorial of four is 24: ", factorial(3) == 5);
 
 }
-/*
+
 int fibonacci(int n)
 {
     int firstTerm, newTerm;
@@ -65,10 +65,19 @@ int fibonacci(int n)
     }
 }
 
-TEST_CASE("testing the fibonacci function") {
-    CHECK(false); // TODO: replace with your tests.
-}
+int testFibonacci(const string& testName, bool condition, int n) 
+{
+    if (n < 3)
+    {
+        return 1;
+    }
+    else
+    {
+        cout << "test failed ";
 
+    }
+}
+/*
 int towers(char src, char target, char spare, int n) 
 {
     if (n <= 0)
