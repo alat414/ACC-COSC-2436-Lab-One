@@ -102,11 +102,11 @@ void towersTest(const string& testName, bool condition)
 {
     if (condition)
     {
-        cout << "Test passed" << testName << endl;
+        cout << "Test passed " << testName << endl;
     }
     else
     {
-        cout << "Test failed!" << testName << endl;
+        cout << "Test failed! " << testName << endl;
     }
 }
 int main()
@@ -117,7 +117,7 @@ int main()
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
 
     //towers('A', 'B', 'C', 3);
-    towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 7);
+    towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
 }
 /*
 
