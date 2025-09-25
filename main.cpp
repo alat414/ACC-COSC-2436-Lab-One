@@ -37,7 +37,7 @@ int fibonacci(int numberPairs)
     
     int leftVariable = 0, rightVariable = 1, followingVariable;
 
-    for (int i = 2; i < numberPairs; i++)
+    for (int i = 2; i <= numberPairs; i++)
     {
         followingVariable = leftVariable + rightVariable;
         leftVariable = rightVariable;
@@ -76,7 +76,7 @@ int main()
     cout << "Running factorial tests: \n";
     //testFactorial("factorial of three is six: ", factorial(3) == 6);
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
-    testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(7) == 8);
+    testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(7) == 13);
 
 }
 /*
