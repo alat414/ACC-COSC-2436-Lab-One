@@ -24,11 +24,11 @@ void test(const string& testName, bool condition)
 {
     if (condition)
     {
-        cout << "test passed " << endl;
+        cout << "test passed " << testName << endl;
     }
     else
     {
-        cout << "test failed " << endl;
+        cout << "test failed " << testName << endl;
     }
 }
 
