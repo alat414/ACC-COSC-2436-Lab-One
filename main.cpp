@@ -24,11 +24,11 @@ void test(const string& testName, bool condition)
 {
     if (condition)
     {
-        cout << "test passed " << testName << endl;
+        cout << "test passed :" << testName << endl;
     }
     else
     {
-        cout << "test failed " << testName << endl;
+        cout << "test failed :" << testName << endl;
     }
 }
 
@@ -36,6 +36,7 @@ int main()
 {
     cout << "Running factorial tests: \n";
     test("factorial of three is six: ", factorial(3) == 6);
+    test("factorial of four is twenty four: ", factorial(4) == 24);
 
 }
 /*
