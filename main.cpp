@@ -37,7 +37,7 @@ int fibonacci(int numberPairs)
     
     int leftVariable = 0, rightVariable = 1, followingVariable;
 
-    for (int i = 2; i <= numberPairs; i++)
+    for (int i = 0; i <= numberPairs; i++)
     {
         followingVariable = leftVariable + rightVariable;
         leftVariable = rightVariable;
