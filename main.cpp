@@ -64,13 +64,13 @@ int towers(char src, char target, char spare, int n)
     return towers(spare, target, src, n - 1);
 }
 
-unsigned int towerMovesCount(int n)
+int towerMovesCount(int n)
 {
     if (n < 0)
     {
         return 0;
     }
-    return static_cast<unsigned int>(pow(2,n)) - 1;
+    return static_cast<int>(pow(2,n)) - 1;
 }
 
 void testFactorial(const string& testName, bool condition)
@@ -105,7 +105,7 @@ int main()
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
 
     //towers('A', 'B', 'C', 3);
-    towerMovesCount(3);
+    cout << towerMovesCount(3);
 }
 /*
 
