@@ -39,7 +39,6 @@ int fibonacci(int numberPairs)
 
     for (int i = 2; i < numberPairs; i++)
     {
-        cout << leftVariable << "\n";
         followingVariable = leftVariable + rightVariable;
         leftVariable = rightVariable;
         rightVariable = followingVariable;
@@ -65,7 +64,7 @@ void testFibonacci(const string& testName, bool condition)
 
     if (condition)
     {
-        cout << "Test Failed, cannot use negative numbers " << endl;
+        cout << "Test Failed" << endl;
     }
     else
     {
