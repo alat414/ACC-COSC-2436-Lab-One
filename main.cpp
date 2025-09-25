@@ -69,7 +69,7 @@ int towerMovesCount(int n)
 {
     if (n < 0)
     {
-        return 0;
+        return;
     }
     return static_cast<int>(pow(2,n)) - 1;
 }
