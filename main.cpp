@@ -116,6 +116,7 @@ int main()
 
     towers('A', 'B', 'C', 3);
     //towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
+    cout << towerMovesCount(3);
 
 
 }
