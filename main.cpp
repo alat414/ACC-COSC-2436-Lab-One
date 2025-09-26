@@ -114,16 +114,12 @@ int main()
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
 
-    //towers('A', 'B', 'C', 3);
-    towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
+    towers('A', 'B', 'C', 3);
+    //towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
+
+
 }
 /*
-
-
-TEST_CASE("testing the towers function") {
-    CHECK(false); // TODO: replace with your tests.
-}
-
 // Warning: Be sure to free the returned copy.
 int* copyArray(const int arr[], int n) {
     int* r = new int[n];
