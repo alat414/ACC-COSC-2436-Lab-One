@@ -114,9 +114,9 @@ int main()
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
 
-    towers('A', 'B', 'C', 4);
+    towers('A', 'B', 'C', 5);
     //towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
-    cout << towerMovesCount(4);
+    cout << towerMovesCount(5);
 
 
 }
