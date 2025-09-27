@@ -82,7 +82,7 @@ void testFactorial(const string& testName, bool condition)
         cout << "test failed :" << testName << endl;
     }
 }
-/*
+
 // Warning: Be sure to free the returned copy.
 int* copyArray(const int arr[], int n) 
 {
@@ -159,15 +159,15 @@ int findKthSmallestValue(int k, int arr[], int start, int end)
 
     if (kZeroBased < s1) 
     {
-        return findKthSmallestValue(k, arr, start, pivotIndex + 1);
+        return findKthSmallestValue(k, arr, start, pivotIndex - 1);
     } 
 
     else 
     {
         int newK = kZeroBased - s1;
-        partition(arr[start], arr[start] + k - 1, arr[end] + 1);
+        return findKthSmallestValue(newK, arr, pivotIndex + 1, end);
     }
-    return arr[k - 1];
+    
 }
 
 // Used to test our results. Warning: Sorts the input array in place.
@@ -251,7 +251,7 @@ void testFindSmallestKValue()
     assert(result == 4);
     cout << "Test Passed, third smallest value is: " << result << endl;
 }
-*/
+
 void testFibonacci(const string& testName, bool condition)
 {
 
@@ -284,11 +284,11 @@ int main()
     //testFactorial("factorial of three is six: ", factorial(3) == 6);
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
-    towers('A', 'B', 'C', 3);
-    towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 7);
-    cout << towerMovesCount(3);
+    //towers('A', 'B', 'C', 3);
+    //towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 7);
+    //cout << towerMovesCount(3);
 
-    //testFindSmallestKValue();
+    testFindSmallestKValue();
 
     return 0;
 
