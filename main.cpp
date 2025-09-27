@@ -244,11 +244,11 @@ void testFindKthSmallestValue(int repetitions, int maxArraySize) {
 
 void testFindSmallestKValue()
 {
-    int arr[] = {4, 1, 8, 7, 3};
+    int arr[] = {2, 9, 1, 4, 6, 8};
     int size = sizeof(arr) / sizeof(arr[0]);
-    int k = 3;
+    int k = 2;
     int result = findKthSmallestValue(k, arr, 0, size -1);
-    assert(result == 4);
+    assert(result == 2);
     cout << "Test Passed, third smallest value is: " << result << endl;
 }
 
@@ -281,6 +281,8 @@ void towersTest(const string& testName, bool condition)
 int main()
 {
     //cout << "Running towers of hanoi function: \n";
+    //cout << "Running factorial tests: \n";
+    //cout << "Running fibonacci tests: \n";
     //testFactorial("factorial of three is six: ", factorial(3) == 6);
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
@@ -291,5 +293,4 @@ int main()
     testFindSmallestKValue();
 
     return 0;
-
 }
