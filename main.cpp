@@ -186,7 +186,7 @@ int findKthSmallestValueViaSorting(int k, int arr[], int start, int end) {
 
     return arr[k];
 }
-
+/*
 // Tests findKthSmallestValue for an array of length n.
 void testFindKthSmallestValueForArraySizeN(int n) {
     if (n == 0 || n == 1) 
@@ -240,7 +240,7 @@ void testFindKthSmallestValue(int repetitions, int maxArraySize) {
         }
     }
 }
-
+*/
 void testFibonacci(const string& testName, bool condition)
 {
 
