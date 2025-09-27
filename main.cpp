@@ -82,7 +82,7 @@ void testFactorial(const string& testName, bool condition)
         cout << "test failed :" << testName << endl;
     }
 }
-
+/*
 // Warning: Be sure to free the returned copy.
 int* copyArray(const int arr[], int n) 
 {
@@ -93,7 +93,7 @@ int* copyArray(const int arr[], int n)
     }
     return r;
 }
-
+*/
 int chooseRandomPivotIndex(int start, int end) 
 {
     int n = (end + 1) - start;
@@ -168,7 +168,7 @@ int findKthSmallestValue(int k, int arr[], int start, int end)
     }
     return arr[k - 1];
 }
-
+/*
 // Used to test our results. Warning: Sorts the input array in place.
 int findKthSmallestValueViaSorting(int k, int arr[], int start, int end) {
     int n = (end + 1) - start;
@@ -186,7 +186,7 @@ int findKthSmallestValueViaSorting(int k, int arr[], int start, int end) {
 
     return arr[k];
 }
-/*
+
 // Tests findKthSmallestValue for an array of length n.
 void testFindKthSmallestValueForArraySizeN(int n) {
     if (n == 0 || n == 1) 
