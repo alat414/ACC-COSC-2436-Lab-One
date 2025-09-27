@@ -284,8 +284,8 @@ int main()
     //testFactorial("factorial of three is six: ", factorial(3) == 6);
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
-    towers('A', 'B', 'C', 5);
-    towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
+    towers('A', 'B', 'C', 3);
+    towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 7);
     cout << towerMovesCount(5);
 
     //testFindSmallestKValue();
