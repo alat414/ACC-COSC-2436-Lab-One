@@ -93,7 +93,8 @@ int* copyArray(const int arr[], int n)
     }
     return r;
 }
-*/
+
+
 int chooseRandomPivotIndex(int start, int end) 
 {
     int n = (end + 1) - start;
@@ -168,7 +169,7 @@ int findKthSmallestValue(int k, int arr[], int start, int end)
     }
     return arr[k - 1];
 }
-/*
+
 // Used to test our results. Warning: Sorts the input array in place.
 int findKthSmallestValueViaSorting(int k, int arr[], int start, int end) {
     int n = (end + 1) - start;
@@ -240,6 +241,16 @@ void testFindKthSmallestValue(int repetitions, int maxArraySize) {
         }
     }
 }
+
+void testFindSmallestKValue()
+{
+    int arr[] = {4, 1, 8, 7, 3};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int k = 3;
+    int result = findKthSmallestValue(k, arr, 0, size -1);
+    assert(result == 4);
+    cout << "Test Passed, third smallest value is: " << result << endl;
+}
 */
 void testFibonacci(const string& testName, bool condition)
 {
@@ -266,26 +277,18 @@ void towersTest(const string& testName, bool condition)
     }
 }
 
-void testFindSmallestKValue()
-{
-    int arr[] = {4, 1, 8, 7, 3};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int k = 3;
-    int result = findKthSmallestValue(k, arr, 0, size -1);
-    assert(result == 4);
-    cout << "Test Passed, third smallest value is: " << result << endl;
-}
+
 int main()
 {
     //cout << "Running towers of hanoi function: \n";
     //testFactorial("factorial of three is six: ", factorial(3) == 6);
     //testFactorial("factorial of four is twenty four: ", factorial(4) == 24);
     //testFibonacci("The 6th value in the fibonacci sequence is 8", fibonacci(6) == 8);
-    //towers('A', 'B', 'C', 5);
-    //towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
-    //cout << towerMovesCount(5);
+    towers('A', 'B', 'C', 5);
+    towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
+    cout << towerMovesCount(5);
 
-    testFindSmallestKValue();
+    //testFindSmallestKValue();
 
     return 0;
 
