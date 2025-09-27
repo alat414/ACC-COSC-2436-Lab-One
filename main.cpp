@@ -242,11 +242,6 @@ void testFindKthSmallestValue(int repetitions, int maxArraySize) {
     }
 }
 
-TEST_CASE("test kth smallest value") {
-    srand(0);
-    CHECK_NOTHROW(testFindKthSmallestValue(3, 5));
-}
-
 void testFibonacci(const string& testName, bool condition)
 {
 
@@ -271,6 +266,16 @@ void towersTest(const string& testName, bool condition)
         cout << "Test failed! " << testName << endl;
     }
 }
+
+void testFindSmallestKValue()
+{
+    int arr[] = {4, 1, 8, 7, 3};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int k = 3;
+    int result = findKthSmallestValue(k, arr, 0, size -1);
+    assert(result == 4);
+    cout << "Test Passed, third smallest value is: " << result << endl;
+}
 int main()
 {
     //cout << "Running towers of hanoi function: \n";
@@ -281,24 +286,7 @@ int main()
     //towersTest("Number of disk moves for three disks is seven", towerMovesCount(3) == 6);
     //cout << towerMovesCount(5);
 
-    srand(time(0));
-    int arr[] = {9, 3, 7, 1, 8, 2, 5, 4, 6};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    cout << "Original array: ";
-    for (int i = 0; i < size; i++) cout << arr[i] << " ";
-    cout << endl;
-    
-    try {
-        // Test various k values
-        for (int k = 1; k <= size; k++) {
-            int testArr[] = {9, 3, 7, 1, 8, 2, 5, 4, 6};  // Fresh copy
-            int result = findKthSmallestValue(k, testArr, 0, size - 1);
-            cout << k << "th smallest: " << result << endl;
-        }
-        
-    } catch (const exception& e) {
-        cerr << "Error: " << e.what() << endl;
-    }
+    testFindSmallestKValue();
     
     return 0;
 
